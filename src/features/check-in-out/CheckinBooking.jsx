@@ -1,19 +1,17 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import styled from "styled-components";
 import BookingDataBox from "../../features/bookings/BookingDataBox";
-
 import Row from "../../ui/Row";
 import Heading from "../../ui/Heading";
 import ButtonGroup from "../../ui/ButtonGroup";
 import Button from "../../ui/Button";
 import ButtonText from "../../ui/ButtonText";
-
 import { useMoveBack } from "../../hooks/useMoveBack";
-import { useQuery } from "@tanstack/react-query";
 import { getBooking } from "../../services/apiBookings";
-import { useParams } from "react-router-dom";
 import Spinner from "../../ui/Spinner";
 import CheckBox from "../../ui/CheckBox";
-import { useEffect, useState } from "react";
 import { formatCurrency } from "../../utils/helpers";
 import { useChecking } from "./useCheckin";
 import { useSettings } from "../settings/useSettings";
