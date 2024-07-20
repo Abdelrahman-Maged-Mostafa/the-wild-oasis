@@ -1,0 +1,12 @@
+
+ npm install @supabase/supabase-js
+
+pass datapase
+2Gn36QlrXfL8Ai4l
+
+// new database
+curl 'https://cfhswauccdltcdnjealq.supabase.co/rest/v1/cabins?select=*' \
+-H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNmaHN3YXVjY2RsdGNkbmplYWxxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA2MDA1NDEsImV4cCI6MjAzNjE3NjU0MX0.2YTXcxEY4gmP4yeTy7yxPeRUdnbXjs4pT6bYx97sVUE" \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNmaHN3YXVjY2RsdGNkbmplYWxxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA2MDA1NDEsImV4cCI6MjAzNjE3NjU0MX0.2YTXcxEY4gmP4yeTy7yxPeRUdnbXjs4pT6bYx97sVUE"
+
+https://supabase.com/docs/reference/javascript/storage-from-upload
